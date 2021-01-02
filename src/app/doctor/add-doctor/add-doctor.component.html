@@ -1,0 +1,17 @@
+<h3>Add Doctor</h3>
+
+<form [formGroup]="doctorForm">
+    <mat-form-field>
+        <input matInput formControlName="nameEn" placeholder="English Name" />
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput formControlName="specialty" placeholder="Specialty" />
+    </mat-form-field>
+    <mat-label>
+        Degree
+    </mat-label>
+    <mat-chip-list>
+        <mat-chip *ngFor="let item of ['MBBS','MD']">{{item}}</mat-chip>
+    </mat-chip-list>
+    <label>Selected degree</label>
+</form>
